@@ -1,7 +1,7 @@
 # Bahen-Elevator-Simulator
 This is a simulator of a elevator with different algorithms on stopping on different floors to pick up passengers. This is an application of pygame.
 
-
+![elevator-simulation](/Users/yolanda/Desktop/Bahen-Elevator-Simulator/elevator-simulation.gif)
 
 # Preparation before running this simulation
 
