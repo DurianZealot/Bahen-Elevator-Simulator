@@ -3,6 +3,12 @@ This is a simulator of a elevator with different algorithms on stopping on diffe
 
 
 
+# Preparation before running this simulation
+
+- Install all packages in `Requirements.txt`
+
+
+
 ## Problem domain overview
 
 The context of our elevator simulation is a building which has a specified number of floors (numbered starting at Floor 1) and elevators that can move between each floor. People can arrive at the elevators at any floor, and elevators move to pick up people and (hopefully) take them to their desired destination floor.

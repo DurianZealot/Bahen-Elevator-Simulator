@@ -1,0 +1,47 @@
+def sample_run() -> Dict[str, int]:
+
+    """Run a sample simulation, and return the simulation statistics."""
+    config = {
+        'num_floors': 4,
+        'num_elevators': 3,
+        'elevator_capacity': 2,
+        'num_people_per_round': 2,
+        # Random arrival generator with 6 max floors and 2 arrivals per round.
+        # 'arrival_generator': algorithms.RandomArrivals(6, 2),
+        # FileArrivals generator with 5 max floors from sample_arrivals.csv
+        # 'arrival_generator':
+        # algorithms.FileArrivals(5, 'sample_arrival_floor1_round0.csv'),
+        # 'arrival_generator': algorithms.FileArrivals(5, 'sample_arrivals.csv'),
+        # 'arrival_generator': algorithms.FileArrivals(3, 'sample_arrival_3floors_5rounds.csv'),
+        # 'arrival_generator': algorithms.FileArrivals(10, 'sample_arrival_10floors_3rounds.csv'),
+        'arrival_generator': algorithms.FileArrivals(4, 'sample_arrival_4floors_round6.csv'),
+        # 'arrival_generator': algorithms.FileArrivals(5, 'sample_arrival_5floors_10rounds.csv'),
+        # 'moving_algorithm': algorithms.RandomAlgorithm(),
+        # 'moving_algorithm': algorithms.PushyPassenger(),
+        'moving_algorithm': algorithms.ShortSighted(),
+        'visualize': True
+    }
+
+    sim = Simulation(config)
+    stats = sim.run(8)
+    return stats
+
+
+
+
+def sample_run() -> Dict[str, int]:
+    """Run a sample simulation, and return the simulation statistics."""
+    config = {
+        'num_floors': 6,
+        'num_elevators': 6,
+        'elevator_capacity': 3,
+        'num_people_per_round': 2,
+        # Random arrival generator with 6 max floors and 2 arrivals per round.
+        'arrival_generator': algorithms.RandomArrivals(6, 2),
+        'moving_algorithm': algorithms.RandomAlgorithm(),
+        'visualize': True
+    }
+
+    sim = Simulation(config)
+    stats = sim.run(15)
+    return stats
